@@ -1,0 +1,29 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90vh;
+    position: sticky;
+    top: 0;
+    width: auto;
+}
+.sidebar-component {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    transition: 0.3s;
+}
+.sidebar-component:hover {
+    background: linear-gradient(to right, #3EA4DC, #3EDC95);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.sidebar-component h1 {
+    margin-left: 10px;
+    font-size: 23px;
+}
+.sidebar-component i {
+    font-size: 30px;
+}

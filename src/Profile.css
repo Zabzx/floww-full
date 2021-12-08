@@ -1,0 +1,53 @@
+
+.profile-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.click-or-drop{
+    background: linear-gradient(to right, #3EA4DC, #3EDC95);
+    cursor: pointer;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    transition: 0.3s;
+}
+.click-or-drop:active{
+    transform: scale(.8);
+}
+.profile-btn-flex {
+    display: flex;
+    justify-content: space-around;
+}
+.profile-btn {
+    background: linear-gradient(to right, #3EA4DC, #3EDC95);
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    transition: 0.3s;
+}
+.profile-btn:active {
+    transform: scale(.8);
+}
+.remove-img {
+    background: linear-gradient(to left, #3EA4DC, #3EDC95);
+    cursor: pointer;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    transition: 0.3s;
+}
+.image-item {
+    text-align: center;
+}
+.user-info {
+    margin-top: 20px;
+}
+.user-info-h1{
+    font-size: 16px;
+}

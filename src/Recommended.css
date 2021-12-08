@@ -1,0 +1,33 @@
+.recommended-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90vh;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.rec-item {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 20px;
+}
+.rec-item-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.rec-item-text h1 {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.rec-item-text p{
+    font-size: 16px;
+    margin-left: 10px;
+}
+.rec-h1 {
+    font-size: 30px;
+    color: #3EA4DC;
+}

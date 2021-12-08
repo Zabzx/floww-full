@@ -1,0 +1,42 @@
+.post {
+    border-bottom: 1px solid #3EDC95;
+    margin-top: 20px;
+}
+.post-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.post-input {
+    border: none;
+    border-left: 2px solid black;
+    padding: 20px;
+    font-size: 25px;
+}
+.user-img {
+    height: 100px;
+    margin-right: 20px;
+}
+.posting-options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.upload-img {
+    cursor: pointer;
+    margin-right: 50px;
+}
+.post-btn {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #3EA4DC, #3EDC95);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+.post-btn:active {
+    transform: scale(.8);
+}

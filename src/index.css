@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); /*Poppins*/
+
+/*Global*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+/*Main Sign up Page*/
+.sign-up{
+  display: flex;
+}
+.welcome-area{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background: linear-gradient(#3EA4DC, #3EDC95 90%);
+  color: white;
+  font-size: 1.4rem;
+}
+.welcome-area i{
+  font-size: 100px;
+}
+.sign-up-area{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.sign-up-area input {
+  margin-left: 25px;
+  margin-top: 20px;
+  padding: 10px 40px 10px 10px;
+  transition: 0.3s;
+  border: solid 1px;
+  border-radius: 10px;
+}
+.sign-up-area input:focus {
+  padding: 10px 5px 10px 10px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+}
+.submit-btn{
+  padding: 10px 20px;
+  background: linear-gradient(to right, #3EA4DC,#3EDC95);
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.submit-btn:active {
+  transform: scale(0.9);
+}
