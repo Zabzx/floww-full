@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import ImageUploading from "react-images-uploading";
 import '../Profile.css'
 import Nav from "./Nav";
+import { useState } from "react";
 
-function Profile({ passUpImage }) {
+function Profile({ passUpImage, posts, liked }) {
   const [images, setImages] = React.useState([]);
   const maxNumber = 1;
 
@@ -16,6 +17,10 @@ function Profile({ passUpImage }) {
   const setPfp = () => {
       passUpImage(images)
   }
+
+
+    let [currentLikes, setCurrentLikes] = useState(posts.likes)
+    const [postLiked, setPostLiked] = useState(false)
 
   return (
     <>
@@ -69,6 +74,39 @@ function Profile({ passUpImage }) {
         <h1 className="user-info-h1">Your Email Adress: {localStorage.getItem('useremail')}</h1>
       </div>
     </div>
+
+    {liked ? <div className="likes-section container">
+      <h1>Liked Posts</h1>
+    {posts.map((post) => (
+      <>
+      {post.name ? <div className="pfeed-item">
+       <div className="userpfp-and-username">
+           <img className="pfp" src={post.pfp} alt=""/>
+           <h1>{post.name}</h1>
+       </div>
+       <div className="time-posted">
+               <p>at: {post.time}</p>
+           </div>
+       <div className="f-img-and-txt">
+       <div className="feed-text">
+           <p>{post.text}</p>
+       </div>
+       {post.img !== '' ? <div className="feed-image">
+          <img className="feed-image fd-img" src={post.img} alt=""/>
+           </div> : ''}
+       </div>
+       <div className="like-and-share">
+       <i className="fas fa-comment"></i>
+       <i className="fas fa-share"></i>
+       <div className="likes">
+           <p className="likes-value">{currentLikes}</p>
+       {postLiked ? <i style={{color: '#3EDC95'}} className="fas fa-thumbs-up"></i> : <i className="fas fa-thumbs-up"></i>}
+       </div>
+       </div>
+       </div> : ''}
+       </>
+    ))}
+    </div> : <div className="container">No liked posts yet</div>}
     </>
   );
 }

@@ -1,6 +1,6 @@
 import '../FeedItem.css'
 import { useState } from 'react';
-function FeedItem({item}) {
+function FeedItem({item, passupItem}) {
 
     let [currentLikes, setCurrentLikes] = useState(item.likes)
     const [postLiked, setPostLiked] = useState(false)
@@ -20,11 +20,13 @@ function FeedItem({item}) {
             setCurrentLikes(item.likes)
         }
 
+        passupItem(item)
+
     }
     return (
         <div className="feed-item">
         <div className="userpfp-and-username">
-            <img className="pfp" src={item.pfp} alt="" />
+            <img className="pfp" src={item.pfp} alt=""/>
             <h1>{item.name}</h1>
         </div>
         <div className="time-posted">

@@ -14,7 +14,7 @@ import Dog from './img/feed/dog.png';
 import Paris from './img/feed/paris.jpg';
 import { useState } from 'react';
 
-function Main({userPfp, hasPfp}){
+function Main({userPfp, hasPfp, passupItem}){
 
     const [feed, setFeed] = useState([
         {
@@ -69,7 +69,7 @@ function Main({userPfp, hasPfp}){
         console.log(text)
     }
 
-    document.title = 'Home'
+    document.title = 'Floww | Home'
     
     return (
         <>
@@ -81,7 +81,7 @@ function Main({userPfp, hasPfp}){
             <div className="main-feed">
                 <Post passUp={addToFeed} userPfp={userPfp} hasPfp={hasPfp}/>
                 {feed.map((item) => (
-                    <FeedItem item={item} key={item.id}/>
+                    <FeedItem item={item} key={item.id} passupItem={passupItem}/>
                 ))}
             </div>
             <div className="recommended">

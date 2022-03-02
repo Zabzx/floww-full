@@ -9,10 +9,10 @@ function Post ({ passUp, userPfp, hasPfp }) {
     const postSomething = () => {
         if (hasPfp){
             
-        passUp({id: Math.floor(Math.random() * 100), name: localStorage.getItem('username'), text: postText, pfp: userPfp[0].data_url, time: 'Now', img: ''})
+        passUp({id: Math.floor(Math.random() * 100), name: localStorage.getItem('username'), text: postText, pfp: userPfp[0].data_url, time: 'Now', img: '', likes: 0})
         } else {
             
-        passUp({id: Math.floor(Math.random() * 100), name: localStorage.getItem('username'), text: postText, pfp: UserImg, time: 'Now', img: ''})
+        passUp({id: Math.floor(Math.random() * 100), name: localStorage.getItem('username'), text: postText, pfp: UserImg, time: 'Now', img: '', likes: 0})
         }
     }
 

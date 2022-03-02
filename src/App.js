@@ -7,6 +7,7 @@ import axios from "axios";
 
 function App() {
 
+  //Sign up States
   const [userFirstName, setUserFirstName] = useState('');
   const [userLastName, setUserLastName] = useState('');
   const [userName, setUserName] = useState('');
@@ -23,6 +24,7 @@ function App() {
     setUserPassword(data.userPassword)
   }
 
+  //User Profile Picture
   const [userPfp, setUserpfp] = useState([])
   const [hasPfp, setHasPfp] = useState(false)
 
@@ -32,6 +34,14 @@ function App() {
     console.log(userPfp)
   }
 
+  const [likedPosts, setLikedPosts] = useState([{}])
+  const [liked, setLiked] = useState(false)
+
+  const addToLikes = (item) => {
+    setLikedPosts([item, ...likedPosts]);
+    setLiked(true)
+  }
+
   return (
     <>
     <Router>
@@ -39,10 +49,10 @@ function App() {
     <SignUp passUp={getFormData}/>
     </Route>
     <Route path="/home">
-     <Main userPfp={userPfp} hasPfp={hasPfp}/>
+     <Main userPfp={userPfp} hasPfp={hasPfp} passupItem={addToLikes}/>
     </Route>
     <Route path="/profile">
-      <Profile name={userFirstName + userLastName} username={userName} email={userEmail} passUpImage={changePfp}/>
+      <Profile name={userFirstName + userLastName} username={userName} email={userEmail} passUpImage={changePfp} posts={likedPosts} liked={liked}/>
     </Route>
     </Router>
     </>
