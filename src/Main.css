@@ -100,4 +100,14 @@ nav li{
     nav {
         flex: 1;
     }
+    .main-sidebar {
+        display: none;
+    }
+    .main-feed {
+        flex: 1;
+        width: 100%;
+    }
+    .recommended {
+        display: none;
+    }
 }

@@ -73,3 +73,10 @@
 .likes-value {
     margin-right: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+    .feed-item {
+        width: 100%;
+        padding: 0px;
+    }
+}
