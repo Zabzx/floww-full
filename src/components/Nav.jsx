@@ -1,9 +1,16 @@
+//Main.css for styles
 import { Link } from "react-router-dom";
 
 function Nav() {
     return(
         <div className="header-container">
         <header className="container">
+            <div className="sidebar-button">
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+            </div>
+
             <div className="logo-container">
             <i className="fab fa-connectdevelop"></i>
             <h1>Floww</h1>

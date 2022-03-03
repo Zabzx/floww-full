@@ -8,8 +8,22 @@
     margin: 0 auto;
 }
 /*Header*/
+.sidebar-button .line {
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+.sidebar-button {
+    display: none;
+}
+.line + .line {
+    margin-top: 5px;
+}
 .header-container {
-    background: linear-gradient(to right, #3EA4DC, #3EDC95)
+    background: linear-gradient(to right, #3EA4DC, #3EDC95);
+    width: 100%;
 }
 header {
     display: flex;
@@ -66,4 +80,24 @@ nav li{
 }
 .recommended {
     width: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar-button {
+        display: block;
+    }
+    .logo-container {
+        display: none;
+    }
+    .nav-links li {
+        font-size: 15px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    nav {
+        flex: 1;
+    }
 }

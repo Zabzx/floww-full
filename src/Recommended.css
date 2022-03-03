@@ -31,3 +31,9 @@
     font-size: 30px;
     color: #3EA4DC;
 }
+
+@media only screen and (max-width: 600px) {
+    .recommended-component {
+        transform: translateX(300%);
+    }
+}
